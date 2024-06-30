@@ -1,8 +1,9 @@
 use async_compression::Level;
+use http::header::CONTENT_ENCODING;
 use lazy_static::lazy_static;
 use rocket::{
     fairing::{Fairing, Info, Kind},
-    http::{hyper::header::CONTENT_ENCODING, Header, MediaType},
+    http::{Header, MediaType},
     tokio::{
         io::{AsyncRead, ReadBuf},
         sync::RwLock,

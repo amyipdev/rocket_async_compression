@@ -41,9 +41,10 @@ pub use self::{
 };
 
 pub use async_compression::Level;
+use http::header::CONTENT_ENCODING;
 use fairing::CachedEncoding;
 use rocket::{
-    http::{hyper::header::CONTENT_ENCODING, MediaType},
+    http::MediaType,
     response::Body,
     Request, Response,
 };
